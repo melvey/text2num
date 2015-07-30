@@ -78,22 +78,24 @@
 
 	function text2num(string) {
 		var pieces = string.split(/[\s-]+/);
-		var number = 0;
+		var calculated = 0;
+		var working = 0;
 	
 		pieces.forEach(function(piece) {
 			var numberfied = small[piece];
 			if(numberfied) {
-				number += numberfied;
+				working += numberfied;
 			} else {
 				numberfied = magnitude[piece];
 				if(numberfied) {
-					number = number * numberfied;
+					calculated += working * numberfied;
+					working = 0;
 				} else {
 					throw new Error('Unknown number: ' + piece);
 				}
 			}
 		});
-		return number;
+		return calculated + working;
 	}
 	
 	exports.text2num = text2num;
