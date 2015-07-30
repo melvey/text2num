@@ -74,7 +74,9 @@
 		'decillion':	1000000000000000000000000000000000
 	};
 
-	
+	var fillerWords = [
+		'and'
+	];
 
 	function text2num(string) {
 		var pieces = string.split(/[\s-]+/);
@@ -90,7 +92,7 @@
 				if(numberfied) {
 					calculated += working * numberfied;
 					working = 0;
-				} else {
+				} else if(fillerWords.indexOf(piece) === -1){
 					throw new Error('Unknown number: ' + piece);
 				}
 			}
