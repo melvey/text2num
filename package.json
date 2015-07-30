@@ -1,0 +1,31 @@
+{
+  "name": "text2num",
+  "version": "1.0.0",
+  "description": "A javascript port of Greg Hewgill's library to convert text numbers to integers",
+  "main": "text2num.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jest-cli": "^0.4.17"
+  },
+  "devDependencies": {
+    "jest-cli": "^0.4.17"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melvey/text2num.git"
+  },
+  "keywords": [
+    "text2num"
+  ],
+  "author": "Matthew Elvey (matt.elvey@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/melvey/text2num/issues"
+  },
+  "homepage": "https://github.com/melvey/text2num"
+}

@@ -25,7 +25,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  **/
-(function() {
+(function(exports) {
 	'use strict';
 	
 	var small = {
@@ -96,5 +96,5 @@
 		return number;
 	}
 	
-	window.text2num = text2num;
-}());
+	exports.text2num = text2num;
+}(exports || this));
