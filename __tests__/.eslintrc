@@ -1,0 +1,15 @@
+{
+  "env": {
+    node: 1,
+	mocha: 1
+  },
+  "rules": {
+    "quotes": [2, "single", "avoid-escape"],
+    "no-trailing-spaces": 0,
+	"key-spacing": 0
+  },
+  globals: {
+    jest: true,
+	expect: true
+  }
+}

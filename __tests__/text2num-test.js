@@ -1,10 +1,15 @@
-jest.dontMock('../text2num');
+jest.dontMock('../src/text2num');
 
 describe('text2num', function() {
-	var text2num = require('../text2num').text2num;
+	'use strict';
+	var text2num = require('../src/text2num').text2num;
+	
+	var throwError = function() {
+		text2num('lkajsdfas');
+	};
 	
 	it('invalid input', function() {
-		expect(function() {text2num('lkajsdfas')}).toThrow();
+		expect(throwError).toThrow();
 	});
 	
 	it('convert 25', function() {
@@ -13,11 +18,11 @@ describe('text2num', function() {
 	
 	it('convert 300', function() {
 		expect(text2num('three hundred')).toBe(300);
-	})
+	});
 
 	it('convert 674', function() {
 		expect(text2num('six hundred and seventy four')).toBe(674);
-	})
+	});
 
 	it('convert 4500', function() {
 		expect(text2num('four thousand five hundred')).toBe(4500);

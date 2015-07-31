@@ -1,3 +1,4 @@
+/* global exports */
 /**
  * This library is a java script port of Greg Hewgill's python library https://github.com/ghewgill/text2num. 
  * It is a simple implementation of a function to convert textual
